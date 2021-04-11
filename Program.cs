@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+using System;
 using System.Linq;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
@@ -40,7 +39,7 @@ namespace Permutations512
 
             stopWatch.Start();
             GetCountPermutations("", letters, countLetters, ref maxLength);
-            Console.WriteLine($"Кол-во перестановок подходящее под условие = {Count}");
+            Console.WriteLine($"Кол-во перестановок подходящее под условие = {_count}");
             stopWatch.Stop();
             
             ts = stopWatch.Elapsed;
@@ -57,7 +56,7 @@ namespace Permutations512
             {
                 if (Test(per))
                 {
-                    Count++;
+                    _count++;
                     Console.WriteLine(per); // Для вывода перестановки на консоль (Сильно влияет на быстродействие)
                 }
                 
